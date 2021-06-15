@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.srcs/sources_1/new/ram_dp_fp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_dp_fp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.srcs/sim_1/new/ram_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_tb
+WARNING: [VRFC 10-986] literal value truncated to fit in 5 bits [/home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.srcs/sim_1/new/ram_tb.v:104]
