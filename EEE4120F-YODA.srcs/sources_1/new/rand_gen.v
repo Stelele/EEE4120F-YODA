@@ -66,8 +66,13 @@ module rand_gen(
     fifo_32 FIFO30(.clk(clk), .srst(reset),.din(PIPO_OUT[30]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[30]));
     fifo_32 FIFO31(.clk(clk), .srst(reset),.din(PIPO_OUT[31]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[31]));
     
-    always @ (posedge clk)
+    always @ (posedge clk or negedge clk)
     begin
+        if(dataOut == 0)
+        begin
+            dataOut <= din;
+        end
+        
         dataOut[0] <= PIPO_OUT[6];
         dataOut[1] <= PIPO_OUT[10];
         dataOut[2] <= PIPO_OUT[26];
