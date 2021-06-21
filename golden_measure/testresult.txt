@@ -1,0 +1,210 @@
+Numbers Generated: 10
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.765026 ms
+Processing Time = 1.58096 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.02807 ms
+Processing Time = 1.92935 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.03273 ms
+Processing Time = 1.99871 ms
+
+
+===============================
+Numbers Generated: 50
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.643062 ms
+Processing Time = 8.71884 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.949986 ms
+Processing Time = 9.88637 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.779404 ms
+Processing Time = 7.85807 ms
+
+
+===============================
+Numbers Generated: 90
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.03459 ms
+Processing Time = 17.5031 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.781637 ms
+Processing Time = 16.9861 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.797266 ms
+Processing Time = 16.2446 ms
+
+
+===============================
+Numbers Generated: 130
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.01917 ms
+Processing Time = 24.5785 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.778144 ms
+Processing Time = 24.4036 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.792231 ms
+Processing Time = 24.4607 ms
+
+
+===============================
+Numbers Generated: 170
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.979421 ms
+Processing Time = 31.5631 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.781818 ms
+Processing Time = 31.5172 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.775181 ms
+Processing Time = 32.6762 ms
+
+
+===============================
+Numbers Generated: 210
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.976447 ms
+Processing Time = 37.1576 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.817488 ms
+Processing Time = 34.9616 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.834527 ms
+Processing Time = 41.6178 ms
+
+
+===============================
+Numbers Generated: 250
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.02912 ms
+Processing Time = 49.0652 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.06763 ms
+Processing Time = 47.9209 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.764346 ms
+Processing Time = 46.6356 ms
+
+
+===============================
+Numbers Generated: 290
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.780712 ms
+Processing Time = 54.0399 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.775631 ms
+Processing Time = 53.4169 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.972304 ms
+Processing Time = 53.3291 ms
+
+
+===============================
+Numbers Generated: 330
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.761285 ms
+Processing Time = 61.4735 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.982394 ms
+Processing Time = 60.1079 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.801574 ms
+Processing Time = 60.4779 ms
+
+
+===============================
+Numbers Generated: 370
+---------Iteration 1 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.03839 ms
+Processing Time = 70.617 ms
+
+---------Iteration 2 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 1.02192 ms
+Processing Time = 70.8447 ms
+
+---------Iteration 3 ----------------
+Clock resolution: 1 ns
+How many number do you want?: 
+Initializing Time = 0.99836 ms
+Processing Time = 69.7218 ms
+
+
+===============================
