@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log serial_rand_gen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source serial_rand_gen.tcl
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source serial_rand_gen.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2275.906 ; gain = 0.023 ; free physical = 767 ; free virtual = 4466
+ERROR: [Common 17-275] File does not exist [/home/lindelani/Documents/SCHOOL/EEE4120F/Downloads/Compressed/digilent-xdc-master/digilent-xdc-master/Nexys-A7-100T-Master.xdc]
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 21 18:09:02 2021...

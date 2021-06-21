@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Jun 21 18:07:46 2021
+# Process ID: 34008
+# Current directory: /home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.runs/synth_1
+# Command line: vivado -log serial_rand_gen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source serial_rand_gen.tcl
+# Log file: /home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.runs/synth_1/serial_rand_gen.vds
+# Journal file: /home/lindelani/Documents/SCHOOL/EEE4120F/YODA/project/EEE4120F-YODA/EEE4120F-YODA.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source serial_rand_gen.tcl -notrace

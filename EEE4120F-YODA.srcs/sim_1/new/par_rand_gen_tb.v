@@ -24,27 +24,25 @@ module par_rand_gen_tb();
 
     reg clk, reset, enable_gen;
     reg [31:0] seed;
-    wire [31:0] dataOut[0:9];
+    wire busy, mem_write;
+    wire [31:0] dataOut;
+    //wire [31:0] test;
     
     par_rand_gen base_par_rand_gen(
         .clk(clk),
         .reset(reset),
         .seed(seed),
+        .count(1000),
         .enable(enable_gen),
-        .dataOut0(dataOut[0]),
-        .dataOut1(dataOut[1]),
-        .dataOut2(dataOut[2]),
-        .dataOut3(dataOut[3]),
-        .dataOut4(dataOut[4]),
-        .dataOut5(dataOut[5]),
-        .dataOut6(dataOut[6]),
-        .dataOut7(dataOut[7]),
-        .dataOut8(dataOut[8]),
-        .dataOut9(dataOut[9])
+        .busy(busy),
+        .mem_write(mem_write),
+        .dataOut(dataOut)
+        //.test(test)
     );
     
     initial 
     begin
+        $display("START RAND-GEN at T = %0t", $time);
         enable_gen = 1;
         reset = 1;
         clk = 0;
@@ -58,8 +56,9 @@ module par_rand_gen_tb();
         reset = 0;
         
     end
-    
+    always @(negedge busy) $display("DONE RAND-GEN at T = 0%t", $time);
     always
         #5 clk = ~clk;
+        
         
 endmodule
