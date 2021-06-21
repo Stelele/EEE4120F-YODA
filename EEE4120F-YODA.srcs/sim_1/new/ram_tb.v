@@ -22,8 +22,9 @@
 
 module ram_tb();
     // Define our controlled signals
-    reg clk, cs, size;
+    reg clk, cs;
     reg a_we, a_oe, b_we, b_oe;
+    reg [31:0] size;
     wire [31:0] a_data;     // this is the connection to ramcu data port
     reg [31:0] a_addr;     // this is the address for port A
     wire [31:0] b_data;     // this is the connection to ramcu data port
