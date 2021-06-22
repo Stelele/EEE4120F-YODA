@@ -33,7 +33,7 @@ module par_rand_gen_tb();
         .clk(clk),
         .reset(reset),
         .seed(seed),
-        .count(1000),
+        .count(15000),
         .enable(enable_gen),
         .busy(busy),
         .mem_write(mem_write),

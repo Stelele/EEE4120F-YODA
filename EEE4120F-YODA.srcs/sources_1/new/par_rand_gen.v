@@ -43,7 +43,7 @@ module par_rand_gen(
     reg [31:0] initialSeed;
     reg [4:0] currentPos;
     reg [31:0] width;
-    parameter [31:0] max_width = 10000;
+    parameter [31:0] max_width = 15000;
     wire [31:0] d_out [0:9];
     reg [31:0] mem_out [0:max_width-1];
     reg [31:0] i = 0; // Array position incrementer
