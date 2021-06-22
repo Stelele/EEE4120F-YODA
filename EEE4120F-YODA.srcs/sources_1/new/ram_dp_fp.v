@@ -23,7 +23,6 @@
 module ram_dp_fp(
     clk     , // clock input
     cs      , // chip select
-    size    , // Required ram size
     a_we    , // channel A write enable
     a_oe    , // channel A output enable
     a_addr  , // channel A address
@@ -37,12 +36,12 @@ module ram_dp_fp(
     //----------Memory parameters------------------
     parameter DATA_WIDTH = 32;      // 32-bit word size
     parameter ADDRESS_WIDTH = 32;   // 32-bit addresses
-    parameter RAM_DEPTH = 100;      // Maximum allowed random numbers
+    parameter RAM_DEPTH = 15000;      // Maximum allowed random numbers
     
     //----------Input Ports------------------------
     input clk, cs;
     input a_we, a_oe, b_we, b_oe;
-    input [ADDRESS_WIDTH-1:0] a_addr, b_addr, size;
+    input [ADDRESS_WIDTH-1:0] a_addr, b_addr;
     
     //----------Bidirectional I/O ports------------
     inout [DATA_WIDTH-1:0] a_data, b_data;

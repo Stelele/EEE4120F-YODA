@@ -24,7 +24,6 @@ module ram_tb();
     // Define our controlled signals
     reg clk, cs;
     reg a_we, a_oe, b_we, b_oe;
-    reg [31:0] size;
     wire [31:0] a_data;     // this is the connection to ramcu data port
     reg [31:0] a_addr;     // this is the address for port A
     wire [31:0] b_data;     // this is the connection to ramcu data port
@@ -37,7 +36,6 @@ module ram_tb();
     ram_dp_fp dut (
         clk     , // clock input
         cs      , // chip select
-        size    , // memory size
         a_we    , // channel A write enable
         a_oe    , // channel A output enable
         a_addr  , // channel A address
@@ -59,7 +57,6 @@ module ram_tb();
     a_we    = 0;
     a_oe    = 0;
     a_addr  = 0;
-    size = 256;
     
     $display("clk cs a_we a_oe a_addr a_data");
     $monitor("  %d  %d    %d    %d    %03d    %03d",

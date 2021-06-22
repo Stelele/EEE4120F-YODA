@@ -20,6 +20,7 @@ Compiling module xil_defaultlib.fifo_21
 Compiling module xil_defaultlib.fifo_29
 Compiling module xil_defaultlib.fifo_28
 Compiling module xil_defaultlib.rand_gen
+Compiling module xil_defaultlib.ram_dp_fp
 Compiling module xil_defaultlib.par_rand_gen
 Compiling module xil_defaultlib.par_rand_gen_tb
 Compiling module xil_defaultlib.glbl
