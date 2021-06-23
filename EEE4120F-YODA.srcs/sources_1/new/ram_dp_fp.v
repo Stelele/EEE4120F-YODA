@@ -1,18 +1,11 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 11.06.2021 02:43:59
 // Design Name: Full Duplex, Dual Port Ram
 // Module Name: ram_dp_fp
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name: PRNG - Parallel Random Number Generator
+// Target Devices: Nexys-A7-100T
+// Description: A Full Duplex, Dual Port RAM module
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:

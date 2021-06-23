@@ -1,7 +1,7 @@
-Running: xsim.dir/rand_gen_tb_behav/xsimk.exe -simmode gui -wdb rand_gen_tb_behav.wdb -simrunnum 0 -socket 57987
+Running: xsim.dir/rand_gen_tb_behav/xsimk.exe -simmode gui -wdb rand_gen_tb_behav.wdb -simrunnum 0 -socket 49179
 Design successfully loaded
-Design Loading Memory Usage: 17732 KB (Peak: 17732 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 17764 KB (Peak: 17764 KB)
+Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 18416 KB (Peak: 18416 KB)
-Simulation CPU Usage: 46 ms
+Simulation Memory Usage: 18452 KB (Peak: 18452 KB)
+Simulation CPU Usage: 156 ms

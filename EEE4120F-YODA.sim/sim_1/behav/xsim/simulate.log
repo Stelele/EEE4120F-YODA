@@ -1,0 +1,6 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Stopped at time : 0 fs : File "C:/Users/IC-CAV/Documents/Vivado/EEE4120F-YODA/EEE4120F-YODA.srcs/sim_1/new/par_rand_gen_tb.v" Line 48
+START RAND-GEN at T = 0
+DONE RAND-GEN at T = 0            52940000
+DONE Writing to Memory at T = 0           127945000

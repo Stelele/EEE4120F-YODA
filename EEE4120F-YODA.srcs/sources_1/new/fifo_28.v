@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: a 28-bit deep FIFO
 // 
 // Dependencies: 
 // 

@@ -36,6 +36,7 @@ module rand_gen_tb();
     
     initial
     begin
+        // initialize module and set seed values
         clk = 0;
         reset = 1;
         enable = 1;
@@ -47,11 +48,13 @@ module rand_gen_tb();
         din = 32'b11010010111000001100001110011010;
         mode = 1;
         
+        // toggle a few times to ensure loading occured
         repeat(10)
         begin
             #5 clk = ~clk;
         end
         
+        // start generating random numbers
         #5 mode = 0;
         
         repeat(900)

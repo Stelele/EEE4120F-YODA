@@ -1,17 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 06/15/2021 06:30:32 PM
-// Design Name: 
+// Design Name: Parallel LUT-SR Random Generator
 // Module Name: par_rand_gen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
+// Project Name: PRNG - Parallel Random Number Generator
+// Target Devices: Nexys-A7-100T
+// Description: Digital Accelelrator that generates multiple numbers in Parrallel
+//              and writes to memory sequentially using LUT-SR RNG algorithm 
+//
+// Dependencies: rand_gen.v rand_dp_fp.v
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -21,31 +18,34 @@
 
 
 module par_rand_gen(
-    input clk,
-    input reset, mem_read,
-    input [31:0] seed, count,
-    input enable,
-    output reg busy, mem_write,
-    output reg[31:0] dataOuta,
-    output reg[31:0] dataOutb
+    input clk                   , // clock signal
+    input reset                 , // reset signal
+    input mem_read              , // read from memory signal
+    input [31:0] seed           , // starting seed value
+    input [31:0] count          , // quantity of random numbers to generate
+    input enable                , // enable module signal
+    output reg busy             , // "busy" signal output
+    output reg mem_write        , // writing to memory signal output
+    output reg[31:0] dataOuta   , // channel A output with random number
+    output reg[31:0] dataOutb     // channel B outptut with random number
     //output reg[31:0] test
     );
     
     // --------------------------------------------------------------------------
     // Random generator parameters
     //---------------------------------------------------------------------------
-    reg modeSeeder;
-    reg mode;
-    reg resetTriggered;
-    reg [4:0] waitPeriod;
-    reg [31:0] seedingValues[0:9];
-    wire [31:0] seedNumber;
-    reg [31:0] initialSeed;
-    reg [4:0] currentPos;
-    reg [31:0] width;
-    parameter [31:0] max_width = 15000;
-    wire [31:0] d_out [0:9];
-    reg [31:0] mem_out [0:max_width-1];
+    reg modeSeeder; // change from load and generate mode for seeder generator
+    reg mode;   // change from load and generate mode for parallel generators
+    reg resetTriggered; // check to see if reset signal was triggered
+    reg [4:0] waitPeriod; // wait period to allow propagation of XOR signals
+    reg [31:0] seedingValues[0:9]; // seeding values for parallel generators
+    wire [31:0] seedNumber; // temporary generated number from seeder generator
+    reg [31:0] initialSeed; // store given starting seed value
+    reg [4:0] currentPos;  // indicator of which position to load generated seed value in seedingValues
+    reg [31:0] width; // store quantity of random generators to generate
+    parameter [31:0] max_width = 15000; // maximum quantity of numbers that can be generated
+    wire [31:0] d_out [0:9]; // wires that would have parallel generated random numbers
+    reg [31:0] mem_out [0:max_width-1]; // temp array to store generated random numbers
     reg [31:0] i = 0; // Array position incrementer
     reg [31:0] j = 0; // memory position
     reg [3:0] k = 0;  // helps skip 3 clock cycles
@@ -129,7 +129,10 @@ module par_rand_gen(
         b_addr  <= count>>1;
         
     end
-    
+
+    // ---------------------------------------------------------------------------
+    // Initialize Seeds for random generators
+    //----------------------------------------------------------------------------  
     always @ (seedNumber)
     begin
         if(resetTriggered && seedNumber != 0)
@@ -144,7 +147,10 @@ module par_rand_gen(
             end 
         end
     end 
-    
+
+    // ---------------------------------------------------------------------------
+    // Load random numbers into temporary array
+    //----------------------------------------------------------------------------
     always @ (posedge clk or negedge clk)
     begin
         if(resetTriggered == 0 && waitPeriod <= 0)

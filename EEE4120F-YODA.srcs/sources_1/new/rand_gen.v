@@ -1,18 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
 // Create Date: 06/09/2021 10:14:04 PM
-// Design Name: 
+// Design Name: LUT-SR Random Number Generator (LUT-SR RNG)
 // Module Name: rand_gen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
+// Project Name: PRNG - Parallel Random Number Generator
+// Target Devices: Nexys-A7-100T
+// Description: This implemets a 32-bit LUT Shift Register Random number generator
+// Dependencies: fifo_21.v, fifo_26.v, fifo_28.v, fifo_29.v, fifo_30.v, fifo_31.v 
+//               fifo_32.v
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
@@ -21,18 +16,21 @@
 
 
 module rand_gen(
-    input clk,
-    input reset,
-    input [31:0] din,
-    input enable,
-    input mode,
-    output reg [31:0] dataOut
+    input clk               , // clock signal
+    input reset             , // reset signal
+    input [31:0] din        , // starting seed value
+    input enable            , // enable module chip
+    input mode              , // change between loading and generating mode
+    output reg [31:0] dataOut // output generated random number
     );
     
-    reg [31:0] PIPO_OUT;
-    wire [31:0] FIFO_OUT;
+    reg [31:0] PIPO_OUT; // Outputs to feed Back into FIFOs
+    wire [31:0] FIFO_OUT; // Outputs of FIFOs
     reg wr_en, rd_en;
     
+    // --------------------------------------------------------------------------
+    // Initialialize FIFO modules that get Feedback from outputs 
+    //---------------------------------------------------------------------------
     fifo_32 FIFO0(.clk(clk), .srst(reset),.din(PIPO_OUT[0]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[0]));
     fifo_30 FIFO1(.clk(clk), .srst(reset),.din(PIPO_OUT[1]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[1]));
     fifo_32 FIFO2(.clk(clk), .srst(reset),.din(PIPO_OUT[2]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[2]));
@@ -66,13 +64,18 @@ module rand_gen(
     fifo_32 FIFO30(.clk(clk), .srst(reset),.din(PIPO_OUT[30]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[30]));
     fifo_32 FIFO31(.clk(clk), .srst(reset),.din(PIPO_OUT[31]), .wr_en(wr_en), .rd_en(rd_en), .dataOutput(FIFO_OUT[31]));
     
+    // --------------------------------------------------------------------------
+    // Generate random numbers
+    //---------------------------------------------------------------------------
     always @ (posedge clk or negedge clk)
     begin
+        // reseed generator if output somehow be came 0
         if(dataOut == 0)
         begin
             dataOut <= din;
         end
         
+        // output PIPO values to data outputs
         dataOut[0] <= PIPO_OUT[6];
         dataOut[1] <= PIPO_OUT[10];
         dataOut[2] <= PIPO_OUT[26];
@@ -111,6 +114,7 @@ module rand_gen(
             wr_en = enable;
             rd_en = enable; 
             
+            // XOR connections to give values to PIPO
             PIPO_OUT[0] <= mode ? din[0] : 0 ^ FIFO_OUT[16] ^ FIFO_OUT[0] ^ FIFO_OUT[12] ^ FIFO_OUT[27];
             PIPO_OUT[1] <= mode ? din[1] : 0 ^ FIFO_OUT[16] ^ FIFO_OUT[12] ^ FIFO_OUT[20] ^ FIFO_OUT[24] ^ FIFO_OUT[1];
             PIPO_OUT[2] <= mode ? din[2] : 0 ^ FIFO_OUT[2] ^ FIFO_OUT[15] ^ FIFO_OUT[0] ^ FIFO_OUT[11] ^ FIFO_OUT[1];
