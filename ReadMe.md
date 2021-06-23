@@ -9,7 +9,7 @@ system dependent. As such, pseudorandom number generators are often used due 
 and significantly faster times [1]. Having said this, generating numerous high quality random numbers can 
 prove to be quite a resource intensive process, as such, hardware accelerated implementations will become 
 inevitable [2]. Regarding this aspect, FPGAs prove to be the best candidates when it comes to generating 
-numerous random numbers at once due to their inherent parallelism and use of bitwise operations [2]. 
+numerous random numbers at once due to their inherent parallelism and use of bitwise operations [2][3]. 
 
 # File Explanation
 
@@ -24,4 +24,4 @@ that can be located in the [golden_measure](golden_measure) folder.
 
 [2] R. Justin, B. K. Mathew and S. Abe, “FPGA Implementation of High Quality Random Number Generator Using LUT Based Shift Registers,” Procedia Technology, vol. 24, pp. 1155-1162, 2016.  
 
-[3] WIKEPEDIA, “Permuted congruential generator,” [Online]. Available: https://en.m.wikipedia.org/wiki/Permuted_congruential_generator. [Accessed 25 May 2021]. 
+[3] D. B. Thomas and W. Luk, “The lut-sr family of uniform random numbergenerators for fpga architectures,”IEEE transactions on very large scaleintegration (vlsi) systems, vol. 21, no. 4, pp. 761–770, 2012.
