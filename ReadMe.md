@@ -1,4 +1,10 @@
-# Background
+# EEE4120F - YODA Project
+
+## Parallel Random Number Generator
+
+## [Gift Mugweni](https://github.com/Stelele) & [Lindelani Mbatha](https://github.com/lindelanimcebo)
+
+## Background
 
 Random numbers have numerous uses in computing. 
 From simulations (Monte Carlo), cryptography to sampling large parameter spaces, 
@@ -11,14 +17,14 @@ prove to be quite a resource intensive process, as such, hardware accelerated 
 inevitable [2]. Regarding this aspect, FPGAs prove to be the best candidates when it comes to generating 
 numerous random numbers at once due to their inherent parallelism and use of bitwise operations [2][3]. 
 
-# File Explanation
+## File Explanation
 
 This repository contains two key things, the Verilog project that can be loaded into Vivado by loading the 
 [EEE4120F-YODA.xpr](EEE4120F-YODA.xpr) project. Aside from this, a C++ golden measure program is also included
 that can be located in the [golden_measure](golden_measure) folder. 
 
 
-# References
+## References
 
 [1] I. Foster, “Random Numbers,” 1995. [Online]. Available: https://www.mcs.anl.gov/~itf/dbpp/text/node116.html. [Accessed 25 May 2021]. 
 
